@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <script src="../angular.min.js" ></script>
+        <script src="app.js"></script>
+        <title>Shopping List</title>
+    </head>
+    <body ng-app="ShopApp">
+        <h1>Shopping List</h1>
+        <div ng-controller="ShopController">
+           <ul>
+               <li ng-repeat="item in shoppingList1">{{item}}</li>
+           </ul>
+        </div>
+    </body>
+</html>
