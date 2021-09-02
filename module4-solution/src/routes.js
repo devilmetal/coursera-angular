@@ -18,28 +18,18 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     url: '/',
     templateUrl: 'src/home/home.template.html'
   })
-
-  // Premade list page
-  .state('mainList', {
-    url: '/main-list',
-    templateUrl: 'src/shoppinglist/templates/main-shoppinglist.template.html',
-    controller: 'MainShoppingListController as mainList',
-    resolve: {
-      items: ['ShoppingListService', function (ShoppingListService) {
-        return ShoppingListService.getItems();
-      }]
+  .state('categories', {
+    url: '/categories',
+    templateUrl: 'src/categories/categories.template.html'
+    controller: 'CategorieListController as mainList',
+        resolve: {
+        items: ['MenuDataService', function (MenuDataService) {
+          return MenuDataService.getAllCategories();
+        }]
     }
+
   })
-
-  // Item detail
-  .state('mainList.itemDetail', {
-    // url: '/item-detail/{itemId}',
-    templateUrl: 'src/shoppinglist/templates/item-detail.template.html',
-    controller: 'ItemDetailController as itemDetail',
-    params: {
-      itemId: null
-    }
-  });
+  ;
 
 }
 

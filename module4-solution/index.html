@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
-    <title>No Cookie Shopping List</title>
+    <title>Single Page Web App</title>
   </head>
   <body>
-    <h1>Welcome to Premade No Cookie Shopping List</h1>
+    <h1>Single Page Web App</h1>
 
     <ui-view></ui-view>
 
@@ -15,11 +15,15 @@
     <script src="../angular-ui-router.min.js"></script>
 
     <!-- Modules -->
-    <script src="src/data.module.js"></script>
     <script src="src/menuapp.module.js"></script>
+    <script src="src/data.module.js"></script>
 
     <!-- Routes -->
     <script src="src/routes.js"></script>
+    
+    <!-- Components <-->
+    <script src="src/categories/categories.component.js"></script>
+    <script src="src/items.component.js"></script>
 
     <!-- Services -->
     <script src="src/menudata.service.js"></script>

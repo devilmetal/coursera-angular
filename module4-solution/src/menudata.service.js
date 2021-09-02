@@ -1,4 +1,6 @@
-    
+(function () {
+'use strict';
+
     MenuDataService.inject = ['$http'] 
     function MenuDataService($http){
         var service = this;
@@ -21,3 +23,7 @@
         }
 
     }
+
+})();
+
+
